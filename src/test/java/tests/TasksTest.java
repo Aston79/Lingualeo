@@ -23,6 +23,7 @@ public class TasksTest extends BaseTest{
     public void moveToInitialCourseThrowProgressMapTest(){
         loginPage.openPage();
         loginPage.login(username, password);
+        $(SIGN_BUTTON).click();
         tasksPage.moveToInitialCourseThrowProgressMap();
         $(STEP_FIRST_LESSON_FIRST).shouldBe(visible);
     }
@@ -31,6 +32,7 @@ public class TasksTest extends BaseTest{
     public void moveToLeoSprintThrowProgressMapTest(){
         loginPage.openPage();
         loginPage.login(username, password);
+        $(SIGN_BUTTON).click();
         tasksPage.moveToLeoSprintThrowProgressMap();
         $(WARNING_MESSAGE).shouldBe(visible);
     }
@@ -39,6 +41,7 @@ public class TasksTest extends BaseTest{
     public void moveToWordTranslationThrowProgressMapTest(){
         loginPage.openPage();
         loginPage.login(username, password);
+        $(SIGN_BUTTON).click();
         tasksPage.moveToWordTranslationThrowProgressMap();
         $(WARNING_MESSAGE).shouldBe(visible);
     }
@@ -47,6 +50,7 @@ public class TasksTest extends BaseTest{
     public void moveToAdditionalTaskThrowProgressMapTest(){
         loginPage.openPage();
         loginPage.login(username, password);
+        $(SIGN_BUTTON).click();
         tasksPage.moveToAdditionalTaskThrowProgressMap();
         $(HI_MESSAGE).shouldBe(visible);
     }
@@ -55,6 +59,7 @@ public class TasksTest extends BaseTest{
     public void checkTheLeosSatiationTest(){
         loginPage.openPage();
         loginPage.login(username, password);
+        $(SIGN_BUTTON).click();
         tasksPage.checkTheLeosSatiation();
         $(LEOS_SATIATION).shouldBe(visible);
     }
@@ -63,6 +68,7 @@ public class TasksTest extends BaseTest{
     public void checkTheVisibilityProgressBySkillsTest(){
         loginPage.openPage();
         loginPage.login(username, password);
+        $(SIGN_BUTTON).click();
         tasksPage.checkTheVisibilityProgressBySkills();
     }
 
@@ -70,6 +76,7 @@ public class TasksTest extends BaseTest{
     public void chooseBusinessTutorTest(){
         loginPage.openPage();
         loginPage.login(username, password);
+        $(SIGN_BUTTON).click();
         tasksPage.findTheTutorOfBusinessSkill();
         $(BUSINESS_SKILL_IS_EXIST).shouldBe(visible);
     }
@@ -78,6 +85,7 @@ public class TasksTest extends BaseTest{
     public void chooseLiteratureTutorTest(){
         loginPage.openPage();
         loginPage.login(username, password);
+        $(SIGN_BUTTON).click();
         tasksPage.findTheTutorOfLiteratureSkill();
         $(LITERATURE_SKILL_IS_EXIST).shouldBe(visible);
     }
@@ -86,6 +94,7 @@ public class TasksTest extends BaseTest{
     public void chooseTOEFLTutorTest(){
         loginPage.openPage();
         loginPage.login(username, password);
+        $(SIGN_BUTTON).click();
         tasksPage.findTheTutorOfTOEFLSkill();
         $(TOEFL_SKILL_IS_EXIST).shouldBe(visible);
     }

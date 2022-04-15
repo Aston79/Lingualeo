@@ -28,7 +28,7 @@ public class TasksPage extends BasePage {
     public static final SelenideElement LEOS_SATIATION = $(By.xpath("//div[@class='ll-progress-journal__block__title']/span[1]"));
 
     public void checkTheFirstStepIsExistOnMap(){
-        $(TASKS).click();
+        $(TASKS).hover();
         $(PROGRESS_MAP).click();
     }
 
@@ -40,28 +40,28 @@ public class TasksPage extends BasePage {
     }
 
     public void moveToLeoSprintThrowProgressMap(){
-        $(TASKS).click();
+        $(TASKS).hover();
         $(PROGRESS_MAP).click();
         $(STEP_FIRST_ON_MAP).click();
         $(STEP_FIRST_LEO_SPRINT).click();
     }
 
     public void moveToWordTranslationThrowProgressMap(){
-        $(TASKS).click();
+        $(TASKS).hover();
         $(PROGRESS_MAP).click();
         $(STEP_FIRST_ON_MAP).click();
         $(STEP_FIRST_WORD_TRANSLATION).click();
     }
 
     public void moveToAdditionalTaskThrowProgressMap(){
-        $(TASKS).click();
+        $(TASKS).hover();
         $(PROGRESS_MAP).click();
         $(STEP_FIRST_ON_MAP).click();
         $(STEP_FIRST_ADDITIONAL_TASK).click();
     }
 
     public void checkTheLeosSatiation(){
-        $(TASKS).click();
+        $(TASKS).hover();
         $(MY_PROGRESS).click();
     }
 
@@ -73,7 +73,7 @@ public class TasksPage extends BasePage {
     public static final SelenideElement SPEAKING_SKILL = $(By.xpath("//*[@id=\"app\"]/div/div[2]/div[2]/div/div/div/div/div/div[2]/div/div[2]/div[2]/div/div[2]/div/div[6]/div[2]/span"));
 
     public void checkTheVisibilityProgressBySkills(){
-        $(TASKS).click();
+        $(TASKS).hover();
         $(MY_PROGRESS).click();
         $(READING_SKILL).click();
         $(GRAMMAR_SKILL).click();
@@ -91,21 +91,20 @@ public class TasksPage extends BasePage {
     public static final SelenideElement TOEFL_SKILL_IS_EXIST = $(By.xpath("//*[@id=\"app\"]/div/div[2]/div[2]/div/div/div/div/div/div/div/div/div[3]/div/div[1]/div[2]/div[1]"));
 
     public void findTheTutorOfBusinessSkill(){
-        $(TASKS).click();
+        $(TASKS).hover();
         $(TUTORS).click();
         $(BUSINESS_BUTTON).click();
     }
 
     public void findTheTutorOfLiteratureSkill(){
-        $(TASKS).click();
+        $(TASKS).hover();
         $(TUTORS).click();
         $(LITERATURE_BUTTON).click();
     }
 
     public void findTheTutorOfTOEFLSkill(){
-        $(TASKS).click();
+        $(TASKS).hover();
         $(TUTORS).click();
         $(TOEFL_BUTTON).click();
     }
-
 }
