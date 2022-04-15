@@ -4,8 +4,7 @@ import org.testng.annotations.Test;
 
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
-import static pages.JunglePage.MADONNA_VIDEO_TITLE;
-import static pages.JunglePage.TITLE_OF_DARK_KNIGHT_CARTOON;
+import static pages.JunglePage.*;
 
 public class JungleTest extends BaseTest {
 
@@ -23,5 +22,21 @@ public class JungleTest extends BaseTest {
         loginPage.login(username, password);
         junglePage.checkThatMoviesAndVideoLinkExistTest();
         $(TITLE_OF_DARK_KNIGHT_CARTOON).shouldBe(visible);
+    }
+
+    @Test
+    public void checkThatBooksAndArticlesExist(){
+        loginPage.openPage();
+        loginPage.login(username, password);
+        junglePage.checkThatBooksAndArticlesExist();
+        $(TITLE_OF_BOOK_AD22).shouldBe(visible);
+    }
+
+    @Test
+    public void checkThatCollectionsLinkExistTest(){
+        loginPage.openPage();
+        loginPage.login(username, password);
+        junglePage.checkThatCollectionsLinkExist();
+        $(TITLE_OF_JADES_LESSON).shouldBe(visible);
     }
 }

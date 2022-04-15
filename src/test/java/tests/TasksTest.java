@@ -5,6 +5,7 @@ import org.testng.annotations.Test;
 
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
+import static pages.LoginPage.SIGN_BUTTON;
 import static pages.TasksPage.*;
 
 public class TasksTest extends BaseTest{
@@ -13,6 +14,7 @@ public class TasksTest extends BaseTest{
     public void checkTheFirstStepIsExistOnMapTest(){
         loginPage.openPage();
         loginPage.login(username, password);
+        $(SIGN_BUTTON).click();
         tasksPage.checkTheFirstStepIsExistOnMap();
         $(STEP_FIRST_ON_MAP).shouldBe(visible);
     }
